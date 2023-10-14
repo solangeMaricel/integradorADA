@@ -1,0 +1,28 @@
+mkdir controllers databases routes schemas
+
+npm init -y 
+npm install -D -E typescript ts-node ts-node-dev dotenv
+git init
+touch .gitignore
+    
+**/node_modules
+**/dist
+**/.env
+**/dev.ts
+
+        "scripts": {
+			"dev": "tsnd --clear ./src/dev.ts",
+    		"build": "tsc",
+    		"start": "node ./dist/index.js"
+	    }
+
+npx tsc --init
+    modificar lineas 14, 29,42, 58, 93
+    
+-- Express --
+npm i -E express
+npm i --save-dev @types/express
+
+
+-- necesitamos esto? --
+npm i -E zod jsonfile
