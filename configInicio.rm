@@ -23,6 +23,5 @@ npx tsc --init
 npm i -E express
 npm i --save-dev @types/express
 
-
--- necesitamos esto? --
 npm i -E zod jsonfile
+npm install -save-dev @types/jsonfile
