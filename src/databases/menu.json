@@ -1,0 +1,36 @@
+{
+    "food": [
+        {
+            "Id": 1,
+            "Plato": "Hamburguesa",
+            "Precio": 3500
+        },
+        {
+            "Id": 2,
+            "Plato": "Pizza",
+            "Precio": 2500
+        },
+        {
+            "Id": 3,
+            "Plato": "Papas Fritas",
+            "Precio": 1500
+        }
+    ],
+    "drinks": [
+        {
+            "Id": 1,
+            "Plato": "cerveza",
+            "Precio": 3500
+        },
+        {
+            "Id": 2,
+            "Plato": "agua",
+            "Precio": 100
+        },
+        {
+            "Id": 3,
+            "Plato": "coca cola",
+            "Precio": 1500
+        }
+    ]
+}

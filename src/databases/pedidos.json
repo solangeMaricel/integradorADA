@@ -1,0 +1,12 @@
+[
+    {
+        "numMesa":"2",
+        "fechaPedido":"14/10",
+        "idMosa": 3,
+        "estado": "ocupada",
+        "pedido": [{
+            "idProducto": 1,
+            "cantidad": 3
+        }]
+    }
+]
