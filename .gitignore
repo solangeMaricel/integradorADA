@@ -2,3 +2,5 @@
 **/dist
 **/.env
 **/dev.ts
+**/MySQL
+**/Diagramas

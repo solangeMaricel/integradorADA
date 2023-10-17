@@ -2,35 +2,36 @@
     "food": [
         {
             "Id": 1,
-            "Plato": "Hamburguesa",
-            "Precio": 3500
+            "product": "Hamburguesa",
+            "price": 2000
         },
         {
             "Id": 2,
-            "Plato": "Pizza",
-            "Precio": 2500
+            "product": "Pizza",
+            "price": 2500
         },
         {
             "Id": 3,
-            "Plato": "Papas Fritas",
-            "Precio": 1500
+            "product": "Papas Fritas",
+            "price": 1500
         }
     ],
+    
     "drinks": [
         {
             "Id": 1,
-            "Plato": "cerveza",
-            "Precio": 3500
+            "product": "cerveza",
+            "price": 3500
         },
         {
             "Id": 2,
-            "Plato": "agua",
-            "Precio": 100
+            "product": "agua",
+            "price": 1000
         },
         {
             "Id": 3,
-            "Plato": "coca cola",
-            "Precio": 1500
+            "product": "coca cola",
+            "price": 1500
         }
     ]
 }

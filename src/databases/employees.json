@@ -1,0 +1,20 @@
+[
+    {
+        "username": "Solange",
+        "password": "123kjshf",
+        "token": "7454b7d2-207f-4868-b63c-4b4ad98129a7",
+        "rol": "waitress"
+    },
+    {
+        "username": "Mariana",
+        "password": "234lkk",
+        "token": "",
+        "rol": "waitress"
+    },
+    {
+        "username": "Pamela",
+        "password": "123kjshf",
+        "token": "",
+        "rol": "admin"
+    }
+]

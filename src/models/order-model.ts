@@ -1,4 +1,4 @@
-import users from '../databases/pedidos.json';
+import users from '../databases/order.json';
 import { writeFile } from 'jsonfile';
 import { randomUUID } from 'node:crypto';
 

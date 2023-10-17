@@ -1,0 +1,57 @@
+[
+    {
+        "idOrder": 1,
+        "username": "Solange",
+        "orderType": "mesa",
+        "description": "2",
+        "dateOrder": "14/10",
+        "detail": [
+            {
+                "product": "Pizza",
+                "price": 2500,
+                "quantity": 4
+            }
+        ],
+        "totalOrder": 10000
+    },
+    {
+        "idOrder": 2,
+        "username": "Mariana",
+        "orderType": "mesa",
+        "description": "4",
+        "dateOrder": "14/10",
+        "detail": [
+            {
+                "product": "Hamburguesa",
+                "price": 2000,
+                "quantity": 2
+            },
+            {
+                "product": "Pizza",
+                "price": 2500,
+                "quantity": 1
+            }
+        ],
+        "totalOrder": 6500
+    },
+    {
+        "idOrder": 3,
+        "username": "Mariana",
+        "orderType": "delivery",
+        "description": "San Martin 282",
+        "dateOrder": "14/10",
+        "detail": [
+            {
+                "product": "Hamburguesa",
+                "price": 2000,
+                "quantity": 2
+            },
+            {
+                "product": "Papas Fritas",
+                "price": 1500,
+                "quantity": 3
+            }
+        ],
+        "totalOrder": 8500
+    }
+]

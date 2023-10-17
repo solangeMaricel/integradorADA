@@ -14,17 +14,12 @@ abstract class UserController {
     
         const userLogged = await UserModel.login(req.body);
     
-        // Si no se encontró al usuario...
         if (userLogged === 404)
           return res.status(404).json({ message: "Username does not exists..." });
     
-        // Si la contraseña está mal...
         if (userLogged === 401)
           return res.status(401).json({ message: "Wrong password" });
     
-        // Si el logueo fue exitoso, devolvemos un 201 porque creamos un TOKEN en la base de datos.
-        // Es necesario devolver ese token al cliente para que pueda guardarlo.
-        // Y así, usarlo como llave para acceder a los endpoints.
         res
           .status(201)
           .json({ message: "User logged successully", token: userLogged });
