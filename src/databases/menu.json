@@ -1,37 +1,38 @@
-{
-    "food": [
-        {
-            "Id": 1,
-            "product": "Hamburguesa",
-            "price": 2000
-        },
-        {
-            "Id": 2,
-            "product": "Pizza",
-            "price": 2500
-        },
-        {
-            "Id": 3,
-            "product": "Papas Fritas",
-            "price": 1500
-        }
-    ],
-    
-    "drinks": [
-        {
-            "Id": 1,
-            "product": "cerveza",
-            "price": 3500
-        },
-        {
-            "Id": 2,
-            "product": "agua",
-            "price": 1000
-        },
-        {
-            "Id": 3,
-            "product": "coca cola",
-            "price": 1500
-        }
-    ]
-}
+[
+    {
+        "Id": 1,
+        "category": "food",
+        "product": "Hamburguesa",
+        "price": 2000
+    },
+    {
+        "Id": 2,
+        "category": "food",
+        "product": "Pizza",
+        "price": 2500
+    },
+    {
+        "Id": 3,
+        "category": "food",
+        "product": "Papas Fritas",
+        "price": 1500
+    },
+    {
+        "Id": 4,
+        "category": "drinks",
+        "product": "cerveza",
+        "price": 3500
+    },
+    {
+        "Id": 5,
+        "category": "drinks",
+        "product": "agua",
+        "price": 1000
+    },
+    {
+        "Id": 6,
+        "category": "drinks",
+        "product": "coca cola",
+        "price": 1500
+    }
+]

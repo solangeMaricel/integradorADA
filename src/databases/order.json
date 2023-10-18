@@ -50,8 +50,33 @@
                 "product": "Papas Fritas",
                 "price": 1500,
                 "quantity": 3
+            },
+            {
+                "product": "agua",
+                "price": 1000,
+                "quantity": 3
             }
         ],
         "totalOrder": 8500
+    },
+    {
+        "idOrder": 4,
+        "username": "Mariana",
+        "orderType": "Delivery",
+        "description": "casteli 44",
+        "dateOrder": "17/10/2023",
+        "detail": [
+            {
+                "product": "Pizza",
+                "price": 2500,
+                "quantity": 6
+            },
+            {
+                "product": "agua",
+                "price": 1000,
+                "quantity": 3
+            }
+        ],
+        "totalOrder": 0
     }
 ]

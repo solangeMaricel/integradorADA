@@ -25,9 +25,7 @@ abstract class UserController {
           .json({ message: "User logged successully", token: userLogged });
       }
 
-      static async createOrder(req: Request, res: Response) {
       
-      }
 
 
     }

@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import { userRouter } from './routes/user-router';
+import { orderRouter } from './routes/order-router';
 
 const app = express();
 const PORT = process.env.PORT ?? 45000;
@@ -15,6 +16,8 @@ app.get('/api', (req, res) => {
 });
 
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
+
 
 app.use('*',(req, res)=>{
     res.status(404).json({
