@@ -7,12 +7,19 @@
         "dateOrder": "14/10",
         "detail": [
             {
+                "idProduct": 2,
                 "product": "Pizza",
                 "price": 2500,
                 "quantity": 4
+            },
+            {
+                "idProduct": 1,
+                "product": "Hamburguesa",
+                "price": 2000,
+                "quantity": 1
             }
         ],
-        "totalOrder": 10000
+        "totalOrder": 12000
     },
     {
         "idOrder": 2,
@@ -22,11 +29,13 @@
         "dateOrder": "14/10",
         "detail": [
             {
+                "idProduct": 1,
                 "product": "Hamburguesa",
                 "price": 2000,
                 "quantity": 2
             },
             {
+                "idProduct": 2,
                 "product": "Pizza",
                 "price": 2500,
                 "quantity": 1
@@ -42,41 +51,24 @@
         "dateOrder": "14/10",
         "detail": [
             {
+                "idProduct": 1,
                 "product": "Hamburguesa",
                 "price": 2000,
                 "quantity": 2
             },
             {
+                "idProduct": 3,
                 "product": "Papas Fritas",
                 "price": 1500,
                 "quantity": 3
             },
             {
+                "idProduct": 5,
                 "product": "agua",
                 "price": 1000,
                 "quantity": 3
             }
         ],
         "totalOrder": 8500
-    },
-    {
-        "idOrder": 4,
-        "username": "Mariana",
-        "orderType": "Delivery",
-        "description": "casteli 44",
-        "dateOrder": "17/10/2023",
-        "detail": [
-            {
-                "product": "Pizza",
-                "price": 2500,
-                "quantity": 6
-            },
-            {
-                "product": "agua",
-                "price": 1000,
-                "quantity": 3
-            }
-        ],
-        "totalOrder": 0
     }
 ]

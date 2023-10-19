@@ -26,7 +26,7 @@ abstract class OrderModel {
 
         const fechaActual = new Date();
         const fechaFormateada = format(fechaActual, 'dd/MM/yyyy');
-
+    
         const result = orders.push({
 
             idOrder: orders.length + 1,
@@ -52,15 +52,31 @@ abstract class OrderModel {
         if (!dataProduct) return 404;
         if (!dataOrder) return 404;
         
-        dataOrder.detail.push({product: dataProduct.product, price: dataProduct.price, quantity: amount});
+        dataOrder.detail.push({idProduct:idProduct,product: dataProduct.product, price: dataProduct.price, quantity: amount});
         await this.writeDB();
         return dataOrder;
 
     }
+
+    static async createTicket(orderId:number){
+        const dataOrder= await this.findByIdOrder(orderId)
+        if (!dataOrder || dataOrder.detail.length == 0) return 404;
+        
+        let totalPrice=0
+        const ticket=[]
+        for(const prod of dataOrder.detail){
+            const {product, quantity, price}=prod
+            totalPrice+=quantity*price
+            ticket.push({product:product, quantity:quantity, price:quantity*price })
+        }
+        ticket.push({"totalPrice":totalPrice})
+        dataOrder.totalOrder=totalPrice
+        await this.writeDB()
+        return ticket
+        
+    }
 }
 
-OrderModel.addItemOrder({idOrder: 3,idProduct: 5,amount: 3})
-    .then(() => console.log())
 
 
 export default OrderModel;
