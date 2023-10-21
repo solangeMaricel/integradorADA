@@ -1,20 +1,26 @@
 [
   {
     "username": "Solange",
-    "password": "123kjshf",
-    "token": "7454b7d2-207f-4868-b63c-4b4ad98129a7",
+    "password": "cf6937399e089eb982bc3423e903f5f0b20a3ff6331fea629050a3825edc2309",
+    "token": "5a4eaf71-9279-4dae-ad72-ea68d79e14f2",
     "rol": "waitress"
   },
   {
     "username": "Mariana",
-    "password": "234lkk",
-    "token": "9a2340bc-26a9-4a26-bf53-f677445323b8",
+    "password": "b4f8221bf83ec997190e03d3485c1f90c962de611f9e816f384eff8f4d951660",
+    "token": "5ba8bdc2-a1a0-46bd-9581-39175977d4c9",
     "rol": "waitress"
   },
   {
     "username": "Pamela",
-    "password": "123kjshf",
-    "token": "9fe2ff81-619e-46f0-9bf7-b2f15da693f6",
+    "password": "79f469ef1fa3f2383532d675d8ebc3c60cd94064b1470a290f10609b2cc5b657",
+    "token": "0227f6ea-9104-4b74-97b2-de434d8f219c",
     "rol": "admin"
+  },
+  {
+    "username": "Alana",
+    "password": "f45a8d1e1f00ce2a23813f3b07de48ff1e38eed6fc0002c7c7d3391ef94a7f7e",
+    "token": "",
+    "rol": "waitress"
   }
 ]
