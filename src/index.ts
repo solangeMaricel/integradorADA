@@ -7,7 +7,7 @@ const PORT = process.env.PORT ?? 45000;
 
 app.use(json());
 
-app.get('/api', (req, res) => {
+app.get('/api', (_req, res) => {
 	res.status(200).json({
 		name: 'API gestión de Restaurante',
 		version: '1.0.0',
@@ -19,7 +19,7 @@ app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 
 
-app.use('*',(req, res)=>{
+app.use('*',(_req, res)=>{
     res.status(404).json({
         error: 'Resource not found.',
     })
