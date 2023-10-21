@@ -1,20 +1,20 @@
 [
-    {
-        "username": "Solange",
-        "password": "123kjshf",
-        "token": "7454b7d2-207f-4868-b63c-4b4ad98129a7",
-        "rol": "waitress"
-    },
-    {
-        "username": "Mariana",
-        "password": "234lkk",
-        "token": "9a2340bc-26a9-4a26-bf53-f677445323b8",
-        "rol": "waitress"
-    },
-    {
-        "username": "Pamela",
-        "password": "123kjshf",
-        "token": "",
-        "rol": "admin"
-    }
+  {
+    "username": "Solange",
+    "password": "123kjshf",
+    "token": "7454b7d2-207f-4868-b63c-4b4ad98129a7",
+    "rol": "waitress"
+  },
+  {
+    "username": "Mariana",
+    "password": "234lkk",
+    "token": "9a2340bc-26a9-4a26-bf53-f677445323b8",
+    "rol": "waitress"
+  },
+  {
+    "username": "Pamela",
+    "password": "123kjshf",
+    "token": "9fe2ff81-619e-46f0-9bf7-b2f15da693f6",
+    "rol": "admin"
+  }
 ]
