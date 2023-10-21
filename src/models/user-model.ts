@@ -19,9 +19,7 @@ abstract class UserModel {
 		const { username, password, rol } = userData;
 		const hashedPasword = this.hashedPassword(password);
 		const userExist = this.findUser(username);
-		console.log(username)
-		console.log(userExist)
-
+	
 		if(userExist != -1) return 400
 
 		users.push({
