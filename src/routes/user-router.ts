@@ -1,11 +1,10 @@
-import { Router } from 'express';
-import UserController from '../controllers/user-controller';
+import { Router } from "express"
+import UserController from "../controllers/user-controller"
+import authMiddleware from "../middlewares/auth"
+export const userRouter = Router()
 
-export const userRouter = Router();
-
-userRouter.post('/login', UserController.login);
-userRouter.delete('/logout', UserController.logout);
-userRouter.delete('/delete', UserController.deleteUser);
-userRouter.patch('/:username', UserController.updateUserData);
-userRouter.post('/', UserController.createUser);
-
+userRouter.post("/login", UserController.login)
+userRouter.delete("/logout", authMiddleware, UserController.logout)
+userRouter.delete("/:username", authMiddleware, UserController.deleteUser)
+userRouter.patch("/:username", authMiddleware, UserController.updateUserData)
+userRouter.post("/", authMiddleware, UserController.createUser)

@@ -2,7 +2,7 @@
   {
     "username": "Solange",
     "password": "cf6937399e089eb982bc3423e903f5f0b20a3ff6331fea629050a3825edc2309",
-    "token": "5a4eaf71-9279-4dae-ad72-ea68d79e14f2",
+    "token": "ef2655ba-d25c-4546-86e8-7f9517610515",
     "rol": "waitress"
   },
   {
@@ -22,5 +22,11 @@
     "password": "f45a8d1e1f00ce2a23813f3b07de48ff1e38eed6fc0002c7c7d3391ef94a7f7e",
     "token": "",
     "rol": "waitress"
+  },
+  {
+    "username": "Rufus",
+    "password": "cc90ba732b1b915769f02ab983a337fb7675c8f57c828cd6c4f90be0b07651ba",
+    "token": "eb8ffacd-547b-4a1d-afd1-3dbef4011467",
+    "rol": "admin"
   }
 ]
