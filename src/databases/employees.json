@@ -16,5 +16,11 @@
     "password": "79f469ef1fa3f2383532d675d8ebc3c60cd94064b1470a290f10609b2cc5b657",
     "token": "0227f6ea-9104-4b74-97b2-de434d8f219c",
     "rol": "admin"
+  },
+  {
+    "username": "Alana",
+    "password": "f45a8d1e1f00ce2a23813f3b07de48ff1e38eed6fc0002c7c7d3391ef94a7f7e",
+    "token": "",
+    "rol": "waitress"
   }
 ]

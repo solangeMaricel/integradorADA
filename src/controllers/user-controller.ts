@@ -3,6 +3,15 @@ import UserModel from "../models/user-model";
 import { validateUser, validatePartialUser } from "../schemas/user-schema";
 
 abstract class UserController {
+  static async createUser(req: Request, res: Response){
+    const newUser = await UserModel.createUser(req.body);
+
+    if (newUser === 400)
+      return res.status(400).json({ message: "Username already exists..." });
+
+    res.status(201).json(newUser);
+  }
+  
   static async login(req: Request, res: Response) {
     const validatedData = validatePartialUser(req.body);
     const userLogged = await UserModel.login(req.body);

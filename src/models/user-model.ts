@@ -19,8 +19,10 @@ abstract class UserModel {
 		const { username, password, rol } = userData;
 		const hashedPasword = this.hashedPassword(password);
 		const userExist = this.findUser(username);
+		console.log(username)
+		console.log(userExist)
 
-		if(userExist) return 400
+		if(userExist != -1) return 400
 
 		users.push({
 			username,
@@ -31,7 +33,7 @@ abstract class UserModel {
 
 		await this.writeDB();
 
-		return 200;
+		return 201;
 	}
 
     static async login(userData: any) {
