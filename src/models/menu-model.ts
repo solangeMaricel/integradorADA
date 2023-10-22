@@ -37,6 +37,15 @@ abstract class MenuModel {
       price,
     };
   }
+
+  static async deleteProduct(id: string) {
+    const productIndex = menu.findIndex((product) => product.id == Number(id));
+    if (productIndex === -1) return 404;
+    const deletedProduct = menu[productIndex];
+    menu.splice(productIndex, 1);
+    this.writeDB();
+    return deletedProduct;
+  }
 }
 
 export default MenuModel;
