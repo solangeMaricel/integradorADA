@@ -1,3 +1,4 @@
+import { number } from "zod";
 import menu from "../databases/menu.json";
 import { writeFile } from "jsonfile";
 abstract class MenuModel {
@@ -19,6 +20,22 @@ abstract class MenuModel {
     if (price) foundItem.price = price;
     this.writeDB();
     return foundItem;
+  }
+  static async addProduct(productData: any) {
+    const { category, product, price } = productData;
+    const id = menu.length + 1;
+    menu.push({
+      id,
+      category,
+      product,
+      price,
+    });
+    return {
+      id,
+      category,
+      product,
+      price,
+    };
   }
 }
 
