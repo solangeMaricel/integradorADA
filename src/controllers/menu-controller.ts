@@ -16,9 +16,9 @@ export default abstract class MenuController {
       price,
     });
     if (editedProduct === 404)
-      res.status(404).json({ message: "No se encontro el producto" });
+      res.status(404).json({ message: "Product not found" });
     res.status(200).json({
-      message: "Producto editado de manera existosa",
+      message: "Product updated successfully",
       product: editedProduct,
     });
   }
@@ -26,7 +26,7 @@ export default abstract class MenuController {
   static async addProduct(req: Request, res: Response) {
     const createdProduct = await MenuModel.addProduct(req.body);
     res.status(200).json({
-      message: "Nuevo aproducto agregado de manera exitosa",
+      message: "New product added successfully",
       product: createdProduct,
     });
   }
@@ -35,9 +35,9 @@ export default abstract class MenuController {
     const { id } = req.params;
     const deletedProduct = await MenuModel.deleteProduct(id);
     if (deletedProduct === 404)
-      return res.status(404).json({ message: "Producto no encontrado" });
+      return res.status(404).json({ message: "Product not found" });
     res.status(200).json({
-      message: "Producto eliminado de manera exitossa",
+      message: "Product deleted successfully",
       deletedProduct,
     });
   }

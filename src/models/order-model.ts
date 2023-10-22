@@ -40,9 +40,9 @@ abstract class OrderModel {
   }
 
   static async addItemOrder(data: any) {
-    const { idOrder, idProduct, amount } = data;
+    const { id, idProduct, amount } = data;
     const dataProduct = await this.findByIdProduct(idProduct);
-    const dataOrder = await this.findByIdOrder(idOrder);
+    const dataOrder = await this.findByIdOrder(id);
 
     if (!dataProduct) return 404;
     if (!dataOrder) return 404;

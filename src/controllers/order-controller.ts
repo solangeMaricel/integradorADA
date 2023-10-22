@@ -12,7 +12,9 @@ abstract class OrderController {
   }
 
   static async addItemOrder(req: Request, res: Response) {
-    const details = await OrderModel.addItemOrder(req.body);
+    const { id } = req.params;
+    const { idProduct, amount } = req.body;
+    const details = await OrderModel.addItemOrder({ id, idProduct, amount });
     if (details === 404)
       res.status(404).json({ message: "Error product or order not found" });
     res
@@ -70,15 +72,11 @@ abstract class OrderController {
     const { idProduct } = req.body;
     const deletedProduct = await OrderModel.deleteProduct({ id, idProduct });
     if (deletedProduct === 404)
-      return res
-        .status(404)
-        .json({ message: "Orden o producto no encontrado" });
-    res
-      .status(200)
-      .json({
-        message: "Producto eliminado de manera satisfactoria",
-        deletedProduct: deletedProduct,
-      });
+      return res.status(404).json({ message: "Order or product not found" });
+    res.status(200).json({
+      message: "Product delted successfully",
+      deletedProduct: deletedProduct,
+    });
   }
 }
 

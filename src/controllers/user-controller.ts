@@ -3,7 +3,7 @@ import UserModel from "../models/user-model";
 import { validateUser, validatePartialUser } from "../schemas/user-schema";
 
 abstract class UserController {
-  static async createUser(req: Request, res: Response){
+  static async createUser(req: Request, res: Response) {
     const newUser = await UserModel.createUser(req.body);
 
     if (newUser === 400)
@@ -11,60 +11,66 @@ abstract class UserController {
 
     res.status(201).json(newUser);
   }
-  
+
   static async login(req: Request, res: Response) {
     const validatedData = validatePartialUser(req.body);
     const userLogged = await UserModel.login(req.body);
-    
+
     if (!validatedData.success)
-      return res.status(400).json({ error: JSON.parse(validatedData.error.message) });
-      
+      return res
+        .status(400)
+        .json({ error: JSON.parse(validatedData.error.message) });
+
     if (userLogged === 404)
       return res.status(404).json({ message: "Username does not exists..." });
-    
-    if (userLogged === 401)
-      return res.status(401).json({ message: "Wrong password" });
-    
-    res.status(201).json({ message: "User logged successully", token: userLogged });
-    };
 
-    static async logout(req: Request, res: Response){
-      const userLoggedOut = await UserModel.logout(req.body);
+    res
+      .status(201)
+      .json({ message: "User logged successully", token: userLogged });
+  }
 
-      if(userLoggedOut === 404) 
-        return res.status(404).json({message: "Username not found"});
+  static async logout(req: Request, res: Response) {
+    const userLoggedOut = await UserModel.logout(req.body);
 
-      if(userLoggedOut === 200) 
-        return res.status(200).json({message: "Logout successfully"});
+    if (userLoggedOut === 404)
+      return res.status(404).json({ message: "Username not found" });
 
-      res.status(400).json({message: "Ups, something wrong happend. Check your params and try again"});
-    };
+    if (userLoggedOut === 200)
+      return res.status(200).json({ message: "Logout successfully" });
 
-    static async deleteUser(req: Request, res: Response){
-      const userDeleted = await UserModel.deleteUser(req.body);
+    res.status(400).json({
+      message: "Ups, something wrong happend. Check your params and try again",
+    });
+  }
 
-      if(userDeleted === 404) 
-        return res.status(404).json({message: 'Username not found'});
+  static async deleteUser(req: Request, res: Response) {
+    const userDeleted = await UserModel.deleteUser(req.body);
 
-      if(userDeleted === 200) 
-        return res.status(200).json({message: "User deleted successfully"});
+    if (userDeleted === 404)
+      return res.status(404).json({ message: "Username not found" });
 
-      res.status(400).json({message: "Ups, something wrong happend. Check your params and try again"});
-    };
+    if (userDeleted === 200)
+      return res.status(200).json({ message: "User deleted successfully" });
 
-    static async updateUserData(req: Request, res: Response){
-      const { username } = req.params
-      const { password, rol } = req.body
-      const userUpdated = await UserModel.updateUserData({username, password, rol});
+    res.status(400).json({
+      message: "Ups, something wrong happend. Check your params and try again",
+    });
+  }
 
-      if(userUpdated === 404) 
-        return res.status(404).json({message: "Username not found"});
+  static async updateUserData(req: Request, res: Response) {
+    const { username } = req.params;
+    const { password, rol } = req.body;
+    const userUpdated = await UserModel.updateUserData({
+      username,
+      password,
+      rol,
+    });
 
-      // if(userUpdated === 400) 
-      //   return res.status(400).json("Please enter a valid param");
+    if (userUpdated === 404)
+      return res.status(404).json({ message: "Username not found" });
 
-      res.status(200).json({message: "Data changed successfully"})
-    }
-};
+    res.status(200).json({ message: "Data changed successfully" });
+  }
+}
 
 export default UserController;
