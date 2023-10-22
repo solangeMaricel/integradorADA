@@ -1,36 +1,36 @@
 [
     {
-        "Id": 1,
+        "id": 1,
         "category": "food",
         "product": "Hamburguesa",
         "price": 2000
     },
     {
-        "Id": 2,
+        "id": 2,
         "category": "food",
         "product": "Pizza",
         "price": 2500
     },
     {
-        "Id": 3,
+        "id": 3,
         "category": "food",
         "product": "Papas Fritas",
         "price": 1500
     },
     {
-        "Id": 4,
+        "id": 4,
         "category": "drinks",
         "product": "cerveza",
         "price": 3500
     },
     {
-        "Id": 5,
+        "id": 5,
         "category": "drinks",
         "product": "agua",
         "price": 1000
     },
     {
-        "Id": 6,
+        "id": 6,
         "category": "drinks",
         "product": "coca cola",
         "price": 1500
