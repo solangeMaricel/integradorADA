@@ -1,8 +1,8 @@
 [
   {
     "username": "Solange",
-    "password": "cf6937399e089eb982bc3423e903f5f0b20a3ff6331fea629050a3825edc2309",
-    "token": "ef2655ba-d25c-4546-86e8-7f9517610515",
+    "password": "1fe502bd7b5c70b5e4488b96d5b2bac52fe1ae11f3021475a633604d4f690ec7",
+    "token": "f623676a-86d1-4804-9838-9a6be748e9fe",
     "rol": "waitress"
   },
   {
@@ -25,8 +25,14 @@
   },
   {
     "username": "Rufus",
-    "password": "cc90ba732b1b915769f02ab983a337fb7675c8f57c828cd6c4f90be0b07651ba",
-    "token": "",
+    "password": "",
+    "token": "8121739b-7962-4500-9457-6b1b8201fee0",
+    "rol": "admin"
+  },
+  {
+    "username": "Carlos",
+    "password": "lolo345",
+    "token": "89f6c0ba-b39e-4f04-b092-c30c1071fd19",
     "rol": "admin"
   }
 ]

@@ -1,13 +1,6 @@
 import z from "zod"
 
 const menuSchema = z.object({
-  idProduct: z
-    .number({
-      invalid_type_error: "the idProduct must be a number",
-      required_error: "idProduct is required",
-    })
-    .int()
-    .positive(),
   product: z.string({
     invalid_type_error: "Product must be a string",
     required_error: "Product is required",
@@ -18,13 +11,10 @@ const menuSchema = z.object({
       required_error: "Price is required",
     })
     .positive(),
-  quantity: z
-    .number({
-      invalid_type_error: "Quantity must be a number",
-      required_error: "Quantity is required",
-    })
-    .int()
-    .positive(),
+  category: z.string({
+    invalid_type_error: "Product must be a string",
+    required_error: "Category is required",
+  }),
 })
 
 const validateMenu = (object: any) => menuSchema.safeParse(object)
