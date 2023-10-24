@@ -1,7 +1,6 @@
 import z from "zod"
 
 const orderSchema = z.object({
-  idOrder: z.number().int().positive(),
   username: z.string({
     invalid_type_error: "Username must be a string",
     required_error: "Username is required",
@@ -25,6 +24,8 @@ const orderSchema = z.object({
   ),
 })
 
-const validateOrder = (object: any) => orderSchema.safeParse(object)
+const validateOrder = (object: any) => orderSchema.safeParse(object);
 
-export { validateOrder }
+const validatePartialOrder = (object: any) => orderSchema.partial().safeParse(object);
+
+export { validateOrder, validatePartialOrder }

@@ -22,13 +22,14 @@ abstract class UserController {
 
   static async login(req: Request, res: Response) {
     const validatedData = validatePartialUser(req.body);
-    const userLogged = await UserModel.login(req.body);
-
+    
     if (!validatedData.success)
-      return res
-        .status(400)
-        .json({ error: JSON.parse(validatedData.error.message) });
-
+    return res
+  .status(400)
+  .json({ error: JSON.parse(validatedData.error.message) });
+  
+  const userLogged = await UserModel.login(req.body);
+  
     if (userLogged === 404)
       return res.status(404).json({ message: "Username does not exists..." });
     if (userLogged === 400)
