@@ -69,8 +69,8 @@ USUARIOS (/api/users)
 - POST api/users/login : Permite loguear un usuario. No se requiere authenticacion. en el body se debe pasar el username y password. El sistema se encarga de hashearla y compararla con la que esta guardada en la BD
   Ejemplo: - Body :
   {
-  "username": Rufus,
-  "password": Rufus
+  "username": "Solange",
+  "password": "adasd44"
   }
 
 - DELETE api/users/logout: desloguea un usuario. Requiere autenticacion, el token se pasa en el header bajo Authorization.

@@ -3,20 +3,12 @@ import { writeFile } from "jsonfile"
 import { randomUUID, createHash } from "node:crypto"
 
 abstract class UserModel {
+
   private static hashedPassword(password: string) {
     const hash = createHash("sha256").update(password).digest("hex")
     return hash
   }
-  private static compareHashPassword = (
-    password: string,
-    hashedPassword: string
-  ) => {
-    if (this.hashedPassword(password) === hashedPassword) {
-      return 202
-    } else {
-      return 401
-    }
-  }
+
   private static findUser(username: string) {
     return users.findIndex((user) => user.username === username)
   }
@@ -51,10 +43,8 @@ abstract class UserModel {
     const { username, password } = userData
     const userFoundIndex = this.findUser(username)
     const userFound = users[userFoundIndex]
-    console.log(password) // "adasd44"
 
     const hashedPassword = this.hashedPassword(password)
-    console.log(hashedPassword) //1fe502bd7b5c70b5e4488b96d5b2bac52fe1ae11f3021475a633604d4f690ec7
     const token = randomUUID()
 
     if (userFoundIndex === -1) return 404
